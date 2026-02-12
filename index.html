@@ -1361,7 +1361,26 @@
                 height: 50px;
                 font-size: 1.5rem;
             }
-        }
+          /* ===== ФИКС ДЛЯ HERO ИЗОБРАЖЕНИЯ ===== */
+    .hero-background img {
+        display: block !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    
+    .hero-background {
+        background: none !important; /* Убираем возможный фон */
+    }
+    
+    /* Принудительно показываем img */
+    .hero-background img[src*="proposal-bg"] {
+        display: block !important;
+    }
+}        
     </style>
 </head>
 <body>
